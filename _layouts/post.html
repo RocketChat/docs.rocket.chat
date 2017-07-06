@@ -1,0 +1,10 @@
+---
+layout: default
+---
+<small>
+  {{ page.date | date: "%b %-d, %Y" }} -
+  {% assign words = content | number_of_words %}
+  {% if words < 360 %} 1 min {% else %} {{ words | divided_by:120 }} mins {% endif %} read
+</small>
+<h1>{{ page.title | escape }}</h1>
+{{ content }}

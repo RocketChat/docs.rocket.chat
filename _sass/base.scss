@@ -1,0 +1,92 @@
+
+body {
+  max-width: $width-page;
+  background: $background-body;
+  color: $color-text;
+  font: $font-body;
+  line-height: 1.58;
+  margin: 0 auto 50px;
+  padding: 0 20px;
+}
+
+a, a:visited {
+  color: $color-anchor;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $color-heading;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  margin-bottom: 15px;
+
+  a, a:visited {
+    text-decoration: none;
+    color: $color-heading;
+  }
+
+  code {
+    font-size: inherit;
+  }
+}
+
+blockquote {
+  font-style: italic;
+  margin: 1.5em 0;
+  padding: 0 1em;
+  font-size: 20px;
+}
+
+code, pre {
+  background: $background-code;
+  color: $color-code;
+  font: $font-code;
+
+  @media(max-width: $width-page) {
+    overflow-x: scroll;
+  }
+}
+
+pre {
+  margin: 20px 0;
+  padding: 8px 10px;
+  border-top: 1px solid $color-code-border;
+  border-bottom: 1px solid $color-code-border;
+}
+
+div.path {
+  font-size: smaller;
+  margin-bottom: -15px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+header, footer {
+  margin: 40px 0;
+}
+
+header a {
+  font-size: smaller;
+}
+
+footer {
+  clear: both;
+  font-size: smaller;
+}
+
+.pagination {
+  margin-top: 40px;
+  font-size: smaller;
+}
+
+.next {
+  float: right;
+}
+
+body.lesson h1 {
+  font-size: 32px;
+  margin-bottom: 0;
+}
