@@ -1,0 +1,25 @@
+- name: Rocket.Chat
+  description: |
+    The Ultimate Open Source Web Chat Platform.
+  docs: https://rocket.chat/docs/
+  user: https://rocket.chat/docs/user-guides
+  admin: https://rocket.chat/docs/administrator-guides
+  dev: https://rocket.chat/docs/developer-guides
+
+- name: Live.Chat for web
+  dev: https://rocket.chat/docs/
+
+- name: Live.chat for iOS
+  dev: https://rocket.chat/docs/
+
+- name: Live.chat for Android
+  dev: https://rocket.chat/docs/
+
+- name: Rocket.chat iOS app
+  dev: https://rocket.chat/docs/
+
+- name: Rocket.chat Android app
+  dev: https://rocket.chat/docs/
+
+- name: Rocket.chat User Presence
+  dev: https://rocket.chat/docs/

@@ -5,58 +5,21 @@ layout: default
 {{ content }}
 
 <ul>
+{% for project in site.data.projects %}
   <li>
-    <h2>Rocket.chat</h2>
+    <h2>{{ project.name }}</h2>
+    <p>{{ project.description }}</p>
     <ul>
-      <li><a href="#">User</a></li>
-      <li><a href="#">Administrator</a></li>
-      <li><a href="#">Developer</a></li>
+      {% if project.user %}
+      <li><a href="{{ project.user }}">User</a></li>
+      {% endif %}
+      {% if project.admin %}
+      <li><a href="{{ project.admin }}">Administrator</a></li>
+      {% endif %}
+      {% if project.dev %}
+      <li><a href="{{ project.dev }}">Developer</a></li>
+      {% endif %}
     </ul>
   </li>
-  <li>
-    <h2>Live.chat for web</h2>
-    <ul>
-      <li><a href="#">User</a></li>
-      <li><a href="#">Administrator</a></li>
-      <li><a href="#">Developer</a></li>
-    </ul>
-  </li>
-  <li>
-    <h2>Live.chat for iOS</h2>
-    <ul>
-      <li><a href="#">User</a></li>
-      <li><a href="#">Administrator</a></li>
-      <li><a href="#">Developer</a></li>
-    </ul>
-  </li>
-  <li>
-    <h2>Live.chat for Android</h2>
-    <ul>
-      <li><a href="#">User</a></li>
-      <li><a href="#">Administrator</a></li>
-      <li><a href="#">Developer</a></li>
-    </ul>
-  </li>
-  <li>
-    <h2>Rocket.chat iOS app</h2>
-    <ul>
-      <li><a href="#">User</a></li>
-      <li><a href="#">Administrator</a></li>
-      <li><a href="#">Developer</a></li>
-    </ul>
-  </li>
-  <li>
-    <h2>Rocket.chat Android app</h2>
-    <ul>
-      <li><a href="#">User</a></li>
-      <li><a href="#">Administrator</a></li>
-      <li><a href="#">Developer</a></li>
-    </ul>
-  </li>
-  <li>
-    <h2>Rocket.chat User Presence</h2>
-    <ul>
-      <li><a href="#">Developer</a></li>
-    </ul>
-  </li>
+{% endfor %}
 </ul>
