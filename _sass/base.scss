@@ -8,11 +8,19 @@ html, body {
   box-sizing: border-box;
 }
 
+.clear {
+  clear: both;
+}
+
 body {
-  background: $background-body;
+  background: $background-light;
   color: $color-text;
   font: $font-body;
   line-height: 1.58;
+}
+
+.white {
+  background: $background-body;
 }
 
 .wrapper {
@@ -55,7 +63,7 @@ img {
 
 code, pre {
   background: $background-code;
-  color: $color-code;
+  color: $color-code-text;
   font: $font-code;
 
   @media(max-width: $width-page) {
@@ -71,7 +79,7 @@ pre {
 }
 
 header {
-  font-size: 18px;
+  font-size: 14px;
   letter-spacing: 0.2px;
 
   h2 {
@@ -86,7 +94,6 @@ header {
 
   li {
     display: inline-block;
-    font-size: 15px;
     padding-left: 15px;
   }
 
@@ -96,9 +103,49 @@ header {
   }
 }
 
+.left {
+  float: left;
+  max-width: 40%;
+}
+
+.right {
+  float: right;
+  max-width: 60%;
+}
+
 footer {
   clear: both;
-  font-size: smaller;
+  font-size: 14px;
   padding: 20px;
   background-color: $background-light;
+  color: $color-footer-text;
+
+  .content {
+    clear: both;
+
+    h4 {
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 0.05px;
+      color: $color-footer-heading;
+    }
+
+    ul {
+      float: left;
+      list-style: none;
+    }
+
+    li {
+      margin-bottom: 7px;
+    }
+
+    a, a:visited {
+      color: $color-footer-text;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: $color-text;
+    }
+  }
 }

@@ -2,26 +2,36 @@
 <html lang="en">
 <head>
   <title>{{ site.title }}{% if page.title %} - {{ page.title }}{% endif %}</title>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="/feed.xml">
   <link rel="shortcut icon" href="/favicon.ico?v=1"/>
   <link rel="stylesheet" href="{{ site.url }}/styles.css?v={{ site.version }}">
+
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
 </head>
 <body class="{{ page.layout }}">
 
-  <div class="wrapper">
+  <div class="white">
     <header>
-      <h2><a href="/">{{ site.title }}</a></h2>
-      <ul>
-        <li><a href="#" target="_blank">Features</a></li>
-        <li><a href="#" target="_blank">Download</a></li>
-        <li><a href="#" target="_blank">Try Demo</a></li>
-      </ul>
+      <div class="wrapper">
+        <h2><a href="/">{{ site.title }}</a></h2>
+        <ul>
+          <li><a href="#" target="_blank">Features</a></li>
+          <li><a href="#" target="_blank">Download</a></li>
+          <li><a href="#" target="_blank">Try Demo</a></li>
+        </ul>
+      </div>
     </header>
 
-    {{ content }}
+    <div class="content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </div>
   </div>
 
   <footer>
@@ -29,49 +39,52 @@
 
       {% include callout.html %}
 
-      <div class="left">
-        <h4>Rocket.Chat</h4>
-        <a href="#">Open on GitHub</a>
-        <div class="">
-          Forks <span>2,600</span>
+      <div class="content">
+        <div class="left">
+          <h4>Rocket.Chat on GitHub</h4>
+          <div class="">
+            <a class="github-button" href="https://github.com/RocketChat/Rocket.Chat"
+              data-icon="octicon-star" data-size="large" data-show-count="true"
+              aria-label="Star RocketChat/Rocket.Chat on GitHub">Star</a>
+            <a class="github-button" href="https://github.com/RocketChat/Rocket.Chat/fork"
+              data-icon="octicon-repo-forked" data-size="large" data-show-count="true"
+              aria-label="Fork RocketChat/Rocket.Chat on GitHub">Fork</a>
+          </div>
         </div>
-        <div class="">
-          Stars <span>11,800</span>
+        <div class="right">
+          <ul>
+            <h4>Get Started</h4>
+            <li><a href="#">Try Demo</a></li>
+            <li><a href="#">Download</a></li>
+          </ul>
+          <ul>
+            <h4>Product</h4>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Hosting</a></li>
+            <li><a href="#">Partners</a></li>
+            <li><a href="#">Docs</a></li>
+          </ul>
+          <ul>
+            <h4>Company</h4>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Jobs</a></li>
+          </ul>
+          <ul>
+            <h4>Legal</h4>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Stickers</a></li>
+            <li><a href="#">Swag store</a></li>
+          </ul>
         </div>
       </div>
-      <div class="right">
-        <ul>
-          <h4>Get Started</h4>
-          <li><a href="#">Try Demo</a></li>
-          <li><a href="#">Download</a></li>
-        </ul>
-        <ul>
-          <h4>Product</h4>
-          <li><a href="#">Features</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Hosting</a></li>
-          <li><a href="#">Partners</a></li>
-          <li><a href="#">Docs</a></li>
-        </ul>
-        <ul>
-          <h4>Company</h4>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Press</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Jobs</a></li>
-        </ul>
-        <ul>
-          <h4>Legal</h4>
-          <li><a href="#">Privacy</a></li>
-          <li><a href="#">Terms of service</a></li>
-          <li></li>
-          <li><a href="#">Stickers</a></li>
-          <li><a href="#">Swag store</a></li>
-        </ul>
 
-      </div>
     </div>
+    <div class="clear"></div>
   </footer>
 
   {% if jekyll.environment != "development" %}
