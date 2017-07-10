@@ -1,12 +1,23 @@
 
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  max-width: $width-page;
   background: $background-body;
   color: $color-text;
   font: $font-body;
   line-height: 1.58;
-  margin: 0 auto 50px;
-  padding: 0 20px;
+}
+
+.wrapper {
+  max-width: $width-page;
+  margin: 0 auto;
 }
 
 a, a:visited {
@@ -36,6 +47,12 @@ blockquote {
   font-size: 20px;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
 code, pre {
   background: $background-code;
   color: $color-code;
@@ -53,40 +70,35 @@ pre {
   border-bottom: 1px solid $color-code-border;
 }
 
-div.path {
-  font-size: smaller;
-  margin-bottom: -15px;
-}
+header {
+  font-size: 18px;
+  letter-spacing: 0.2px;
 
-img {
-  max-width: 100%;
-  display: block;
-  margin: 0 auto;
-}
+  h2 {
+    font-size: 18px;
+    display: inline-block;
+  }
 
-header, footer {
-  margin: 40px 0;
-}
+  ul {
+    list-style: none;
+    float: right;
+  }
 
-header a {
-  font-size: smaller;
+  li {
+    display: inline-block;
+    font-size: 15px;
+    padding-left: 15px;
+  }
+
+  a, a:visited {
+    text-decoration: none;
+    color: $color-heading;
+  }
 }
 
 footer {
   clear: both;
   font-size: smaller;
-}
-
-.pagination {
-  margin-top: 40px;
-  font-size: smaller;
-}
-
-.next {
-  float: right;
-}
-
-body.lesson h1 {
-  font-size: 32px;
-  margin-bottom: 0;
+  padding: 20px;
+  background-color: $background-light;
 }

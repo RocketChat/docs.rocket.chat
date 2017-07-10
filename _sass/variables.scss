@@ -1,14 +1,19 @@
 
-$width-page: 720px;
+$width-page: 920px;
 
 $background-body: #ffffff;
 $background-code: #eee8d5;
 
-$color-text: #222222;
-$color-heading: #444444;
-$color-anchor: #20597e;
+$background-dark: #414852;
+$background-light: #f7f8fa;
+$background-bright: #1d74f5;
+
+$color-heading: #414852;
+$color-anchor: #1d74f5;
+$color-text: #6c727a;
+
 $color-code: #555555;
 $color-code-border: #555555;
 
-$font-body: 18px Georgia, serif;
+$font-body: 18px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 $font-code: 15px Consolas, Courier New, monospace;
