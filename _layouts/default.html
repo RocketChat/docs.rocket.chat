@@ -15,76 +15,68 @@
 </head>
 <body class="{{ page.layout }}">
 
-  <div class="white">
+  <div class="top">
     <header>
-      <div class="wrapper">
-        <h2><a href="/">{{ site.title }}</a></h2>
-        <ul>
-          <li><a href="#" target="_blank">Features</a></li>
-          <li><a href="#" target="_blank">Download</a></li>
-          <li><a href="#" target="_blank">Try Demo</a></li>
-        </ul>
-      </div>
+      <h2><a href="/">{{ site.title }}</a></h2>
+      <ul>
+        <li><a href="#" target="_blank">Features</a></li>
+        <li><a href="#" target="_blank">Download</a></li>
+        <li><a href="#" target="_blank">Try Demo</a></li>
+      </ul>
     </header>
 
-    <div class="content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
+    <div class="main">
+      {{ content }}
     </div>
   </div>
 
   <footer>
-    <div class="wrapper">
 
-      {% include callout.html %}
+    {% include callout.html %}
 
-      <div class="content">
-        <div class="left">
-          <h4>Rocket.Chat on GitHub</h4>
-          <div class="">
-            <a class="github-button" href="https://github.com/RocketChat/Rocket.Chat"
-              data-icon="octicon-star" data-size="large" data-show-count="true"
-              aria-label="Star RocketChat/Rocket.Chat on GitHub">Star</a>
-            <a class="github-button" href="https://github.com/RocketChat/Rocket.Chat/fork"
-              data-icon="octicon-repo-forked" data-size="large" data-show-count="true"
-              aria-label="Fork RocketChat/Rocket.Chat on GitHub">Fork</a>
-          </div>
-        </div>
-        <div class="right">
-          <ul>
-            <h4>Get Started</h4>
-            <li><a href="https://open.rocket.chat/" target="_blank">Try Demo</a></li>
-            <li><a href="https://rocket.chat/download">Download</a></li>
-          </ul>
-          <ul>
-            <h4>Product</h4>
-            <li><a href="https://rocket.chat/features">Features</a></li>
-            <li><a href="https://rocket.chat/services">Services</a></li>
-            <li><a href="https://rocket.chat/hosting">Hosting</a></li>
-            <li><a href="https://rocket.chat/partners">Partners</a></li>
-            <li><a href="https://docs.rocket.chat">Docs</a></li>
-          </ul>
-          <ul>
-            <h4>Company</h4>
-            <li><a href="https://rocket.chat/team">About</a></li>
-            <li><a href="https://rocket.chat/press">Press</a></li>
-            <li><a href="https://rocket.chat/blog">Blog</a></li>
-            <li><a href="https://rocket.chat/contact">Contact</a></li>
-            <li><a href="https://rocket.chat/jobs">Jobs</a></li>
-          </ul>
-          <ul>
-            <h4>Legal</h4>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="https://www.stickermule.com/user/1070688638/stickers">Stickers</a></li>
-            <li><a href="https://shop.spreadshirt.com/rocketchat">Swag store</a></li>
-          </ul>
+    <div class="links">
+      <div class="left">
+        <h4>Rocket.Chat on GitHub</h4>
+        <div class="">
+          <a class="github-button" href="https://github.com/RocketChat/Rocket.Chat"
+            data-icon="octicon-star" data-size="large" data-show-count="true"
+            aria-label="Star RocketChat/Rocket.Chat on GitHub">Star</a>
+          <a class="github-button" href="https://github.com/RocketChat/Rocket.Chat/fork"
+            data-icon="octicon-repo-forked" data-size="large" data-show-count="true"
+            aria-label="Fork RocketChat/Rocket.Chat on GitHub">Fork</a>
         </div>
       </div>
-
+      <div class="right">
+        <ul>
+          <h4>Get Started</h4>
+          <li><a href="https://open.rocket.chat/" target="_blank">Try Demo</a></li>
+          <li><a href="https://rocket.chat/download">Download</a></li>
+        </ul>
+        <ul>
+          <h4>Product</h4>
+          <li><a href="https://rocket.chat/features">Features</a></li>
+          <li><a href="https://rocket.chat/services">Services</a></li>
+          <li><a href="https://rocket.chat/hosting">Hosting</a></li>
+          <li><a href="https://rocket.chat/partners">Partners</a></li>
+          <li><a href="https://docs.rocket.chat">Docs</a></li>
+        </ul>
+        <ul>
+          <h4>Company</h4>
+          <li><a href="https://rocket.chat/team">About</a></li>
+          <li><a href="https://rocket.chat/press">Press</a></li>
+          <li><a href="https://rocket.chat/blog">Blog</a></li>
+          <li><a href="https://rocket.chat/contact">Contact</a></li>
+          <li><a href="https://rocket.chat/jobs">Jobs</a></li>
+        </ul>
+        <ul>
+          <h4>Legal</h4>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms of service</a></li>
+          <li><a href="https://www.stickermule.com/user/1070688638/stickers">Stickers</a></li>
+          <li><a href="https://shop.spreadshirt.com/rocketchat">Swag store</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="clear"></div>
   </footer>
 
   {% if jekyll.environment != "development" %}

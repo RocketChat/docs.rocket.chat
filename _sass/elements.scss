@@ -1,0 +1,63 @@
+
+// elements
+
+* {
+  box-sizing: border-box;
+}
+
+a, a:visited {
+  color: $link-color;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $link-hover-color;
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $heading-color;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  margin-bottom: 15px;
+
+  a, a:visited {
+    text-decoration: none;
+    color: $heading-color-hover;
+  }
+
+  code {
+    font-size: inherit;
+  }
+}
+
+blockquote {
+  font-style: italic;
+  margin: 1.5em 0;
+  padding: 0 1em;
+  font-size: 20px;
+}
+
+code, pre {
+  background: $code-background;
+  color: $code-color;
+  font-family: $code-font-family;
+  font-size: $code-font-size;
+
+  @media(max-width: $content-width) {
+    overflow-x: scroll;
+  }
+}
+
+pre {
+  margin: 20px 0;
+  padding: 8px 10px;
+  border-top: 1px solid $code-border-color;
+  border-bottom: 1px solid $code-border-color;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
