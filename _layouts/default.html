@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{{ site.title }}{% if page.title %} - {{ page.title }}{% endif %}</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="/feed.xml">
+  <link rel="shortcut icon" href="/favicon.ico?v=1"/>
+  <link rel="stylesheet" href="{{ site.url }}/styles.css?v={{ site.version }}">
+
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+<body class="{{ page.layout }}">
+
+  <div class="top">
+    <header>
+      <h2><a href="/">{{ site.title }}</a></h2>
+      <ul>
+        <li><a href="#" target="_blank">Features</a></li>
+        <li><a href="#" target="_blank">Download</a></li>
+        <li><a href="#" target="_blank">Try Demo</a></li>
+      </ul>
+    </header>
+
+    <div class="main">
+      {{ content }}
+    </div>
+  </div>
+
+  <footer>
+
+    <div class="callout">
+      <div class="left">
+        <h3>Ready to try?</h3>
+        <p>Try our fully featured Browser Demo or Download Rocket.Chat to your device</p>
+      </div>
+      <div class="right">
+        <a class="button dark" href="https://open.rocket.chat/">Explore Demo</a>
+        <a class="button bright" href="https://rocket.chat/download">Download Now</a>
+      </div>
+    </div>
+
+    <div class="links">
+      <div class="left">
+        <h4>Rocket.Chat on GitHub</h4>
+        <div class="">
+          <a class="github-button" href="https://github.com/RocketChat/Rocket.Chat"
+            data-icon="octicon-star" data-size="large" data-show-count="true"
+            aria-label="Star RocketChat/Rocket.Chat on GitHub">Star</a>
+          <a class="github-button" href="https://github.com/RocketChat/Rocket.Chat/fork"
+            data-icon="octicon-repo-forked" data-size="large" data-show-count="true"
+            aria-label="Fork RocketChat/Rocket.Chat on GitHub">Fork</a>
+        </div>
+      </div>
+      <div class="right">
+        <ul>
+          <h4>Get Started</h4>
+          <li><a href="https://open.rocket.chat/" target="_blank">Try Demo</a></li>
+          <li><a href="https://rocket.chat/download">Download</a></li>
+        </ul>
+        <ul>
+          <h4>Product</h4>
+          <li><a href="https://rocket.chat/features">Features</a></li>
+          <li><a href="https://rocket.chat/services">Services</a></li>
+          <li><a href="https://rocket.chat/hosting">Hosting</a></li>
+          <li><a href="https://rocket.chat/partners">Partners</a></li>
+          <li><a href="https://docs.rocket.chat">Docs</a></li>
+        </ul>
+        <ul>
+          <h4>Company</h4>
+          <li><a href="https://rocket.chat/team">About</a></li>
+          <li><a href="https://rocket.chat/press">Press</a></li>
+          <li><a href="https://rocket.chat/blog">Blog</a></li>
+          <li><a href="https://rocket.chat/contact">Contact</a></li>
+          <li><a href="https://rocket.chat/jobs">Jobs</a></li>
+        </ul>
+        <ul>
+          <h4>Legal</h4>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms of service</a></li>
+          <li><a href="https://www.stickermule.com/user/1070688638/stickers">Stickers</a></li>
+          <li><a href="https://shop.spreadshirt.com/rocketchat">Swag store</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  {% if jekyll.environment != "development" %}
+  <!-- Google Analytics -->
+  {% endif %}
+
+</body>
+</html>

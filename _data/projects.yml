@@ -1,0 +1,51 @@
+- name: Rocket.Chat
+  published: true
+  description: |
+    The Ultimate Open Source Web Chat Platform.
+  project_gh: https://github.com/RocketChat/Rocket.Chat
+  docs_gh: https://github.com/RocketChat/Rocket.Chat.Docs
+  docs: https://rocket.chat/docs/
+  dev: https://rocket.chat/docs/developer-guides
+  user: https://rocket.chat/docs/user-guides
+  admin: https://rocket.chat/docs/administrator-guides
+  install: https://rocket.chat/docs/installation/minimum-requirements
+
+- name: Rocket.Chat iOS
+  published: true
+  project_gh: https://github.com/RocketChat/Rocket.Chat.iOS
+  dev: http://rocketchat.github.io/Rocket.Chat.iOS/
+
+- name: Rocket.Chat Android
+  published: true
+  project_gh: https://github.com/RocketChat/Rocket.Chat.Android
+  dev: https://github.com/RocketChat/Rocket.Chat.Android/tree/doc
+
+- name: Rocket.Chat Java SDK
+  published: true
+  project_gh: https://github.com/RocketChat/Rocket.Chat.Java.SDK
+  dev: https://github.com/RocketChat/Rocket.Chat.Java.SDK
+
+- name: Rocket.Chat iOS SDK
+  published: false
+  project_gh: https://github.com/RocketChat/Rocket.Chat.iOS.SDK
+  dev: http://rocketchat.github.io/Rocket.Chat.iOS/
+
+- name: Rocket.chat User Presence
+  published: false
+
+- name: Rocket.Chat Electron
+  published: false
+  project_gh: https://github.com/RocketChat/Rocket.Chat.Electron
+
+- name: Rocket.Chat Cordova
+  published: false
+  project_gh: https://github.com/RocketChat/Rocket.Chat.Cordova
+
+- name: Live.Chat
+  published: false
+
+- name: Live.chat iOS
+  published: false
+
+- name: Live.chat Android
+  published: false

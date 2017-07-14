@@ -1,0 +1,226 @@
+
+// variables
+
+$body-color: #6c727a;
+$body-background: #f7f8fa;
+$body-line-height: 1.58;
+$body-font-size: 15px;
+$body-font-family:
+  -apple-system, BlinkMacSystemFont,
+  "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans",
+  "Droid Sans", "Helvetica Neue", sans-serif;
+
+$content-width: 920px;
+
+$top-background: #ffffff;
+
+$header-font-size: 14px;
+$header-logo-font-size: 16px;
+
+$footer-font-size: 14px;
+$footer-color: #929db3;
+$footer-background: #f7f8fa;
+$footer-heading-font-size: 11px;
+$footer-heading-color: #bcc5d6;
+
+$heading-color: #414852;
+$heading-color-hover: #414852;
+
+$link-color: #1d74f5;
+$link-hover-color: #6c727a;
+
+$code-background: #eee8d5;
+$code-color: #555555;
+$code-border-color: #555555;
+$code-font-size: 15px;
+$code-font-family:
+  "Consolas", "Monaco", "Ubuntu Monospace",
+  "Courier New", monospace;
+
+// dark grey
+$background-primary: #414852;
+// light grey
+$background-secondary: #f7f8fa;
+// blue, same as link-color
+$background-highlight: #1d74f5;
+
+
+// elements
+
+* {
+  box-sizing: border-box;
+}
+
+a, a:visited {
+  color: $link-color;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $link-hover-color;
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 15px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: $heading-color;
+
+  a, a:visited {
+    text-decoration: none;
+    color: $heading-color-hover;
+  }
+
+  code {
+    font-size: inherit;
+  }
+}
+
+blockquote {
+  margin: 1.5em 0;
+  padding: 0 1em;
+  font-style: italic;
+  font-size: 20px;
+}
+
+code, pre {
+  background: $code-background;
+  color: $code-color;
+  font-family: $code-font-family;
+  font-size: $code-font-size;
+
+  @media(max-width: $content-width) {
+    overflow-x: scroll;
+  }
+}
+
+pre {
+  margin: 20px 0;
+  padding: 8px 10px;
+  border-top: 1px solid $code-border-color;
+  border-bottom: 1px solid $code-border-color;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+
+// structure
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+// use same background as footer to blend on short pages
+body {
+  background: $body-background;
+  color: $body-color;
+  font-family: $body-font-family;
+  font-size: $body-font-size;
+  line-height: $body-line-height;
+}
+
+// wrap header and .main, give it a white background
+.top {
+  background: $top-background;
+}
+
+header {
+  max-width: $content-width;
+  margin: 0 auto;
+  font-size: $header-font-size;
+
+  h2 {
+    display: inline-block;
+    font-size: $header-logo-font-size;
+  }
+
+  ul {
+    list-style: none;
+    float: right;
+  }
+
+  li {
+    display: inline-block;
+    padding-left: 18px;
+  }
+
+  a, a:visited {
+    text-decoration: none;
+    color: $heading-color;
+  }
+}
+
+.main {
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 0 0 25px;
+}
+
+footer {
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 20px 0;
+  background-color: $footer-background;
+  color: $footer-color;
+  font-size: $footer-font-size;
+
+  .callout {
+    clear: both;
+
+    .left {
+      float: left;
+      max-width: 40%;
+    }
+
+    .right {
+      float: right;
+      max-width: 60%;
+    }
+  }
+
+  .links {
+    clear: both;
+
+    .left {
+      float: left;
+      max-width: 40%;
+    }
+
+    .right {
+      float: right;
+      max-width: 60%;
+    }
+
+    h4 {
+      text-transform: uppercase;
+      letter-spacing: 0.05px;
+      font-size: $footer-heading-font-size;
+      color: $footer-heading-color;
+    }
+
+    ul {
+      list-style: none;
+      float: left;
+    }
+
+    li {
+      line-height: 2;
+    }
+
+    a, a:visited {
+      color: $footer-color;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: $body-color;
+    }
+  }
+}
