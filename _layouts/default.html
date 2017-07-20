@@ -8,7 +8,7 @@
 
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="/feed.xml">
-  <link rel="stylesheet" href="/styles.css?v={{ site.version }}">
+  <link rel="stylesheet" href="{{ site.url }}/styles.css?v={{ site.version }}">
 
   <!-- <link rel="shortcut icon" href="/favicon.ico?v=1"/> -->
 
@@ -18,7 +18,7 @@
 
   <div class="top">
     <header>
-      <h2><a href="/">{{ site.title }}</a></h2>
+      <h2><a href="{{ site.url }}">{{ site.title }}</a></h2>
       <ul>
         <li><a href="#" target="_blank">Features</a></li>
         <li><a href="#" target="_blank">Download</a></li>
@@ -42,7 +42,7 @@
         <a class="button" href="https://open.rocket.chat/">Explore Demo</a>
         <a class="button highlight" href="https://rocket.chat/download">Download Now</a>
       </div>
-      <div class="clear">        
+      <div class="clear">
       </div>
     </div>
 
