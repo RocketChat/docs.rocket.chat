@@ -12,6 +12,7 @@ $body-font-family:
   "Droid Sans", "Helvetica Neue", sans-serif;
 
 $content-width: 920px;
+$content-padding: 25px;
 
 $top-background: #ffffff;
 
@@ -131,6 +132,10 @@ body {
   background: $top-background;
 }
 
+header, .main, footer {
+  padding: 0 $content-padding $content-padding;
+}
+
 header {
   max-width: $content-width;
   margin: 0 auto;
@@ -160,43 +165,31 @@ header {
 .main {
   max-width: $content-width;
   margin: 0 auto;
-  padding: 0 0 25px;
 }
 
 footer {
   max-width: $content-width;
   margin: 0 auto;
-  padding: 20px 0;
   background-color: $footer-background;
   color: $footer-color;
   font-size: $footer-font-size;
 
+  .left {
+    float: left;
+    max-width: 40%;
+  }
+
+  .right {
+    float: right;
+    max-width: 60%;
+  }
+
   .callout {
     clear: both;
-
-    .left {
-      float: left;
-      max-width: 40%;
-    }
-
-    .right {
-      float: right;
-      max-width: 60%;
-    }
   }
 
   .links {
     clear: both;
-
-    .left {
-      float: left;
-      max-width: 40%;
-    }
-
-    .right {
-      float: right;
-      max-width: 60%;
-    }
 
     h4 {
       text-transform: uppercase;
@@ -223,4 +216,46 @@ footer {
       color: $body-color;
     }
   }
+}
+
+// tablet
+
+@media all and (max-width: 800px) {
+
+footer {
+  .left, .right {
+    max-width: 100%;
+    float: none;
+  }
+
+  .links ul:first-child {
+    padding-left: 0;
+  }
+}
+
+
+// mobile
+
+@media all and (max-width: 600px) {
+
+header {
+  h2 {
+    display: block;
+  }
+
+  ul, li:first-child {
+    float: none;
+    padding-left: 0;
+  }
+}
+
+footer {
+  .links
+    ul {
+      float: none;
+      padding-left: 0;
+    }
+  }
+}
+
 }
