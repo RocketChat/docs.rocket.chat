@@ -12,6 +12,7 @@ $body-font-family:
   "Droid Sans", "Helvetica Neue", sans-serif;
 
 $content-width: 920px;
+$content-padding: 25px;
 
 $top-background: #ffffff;
 
@@ -38,6 +39,8 @@ $code-font-family:
   "Consolas", "Monaco", "Ubuntu Monospace",
   "Courier New", monospace;
 
+$button-color: #ffffff;
+
 // dark grey
 $background-primary: #414852;
 // light grey
@@ -60,6 +63,18 @@ a, a:visited {
 a:hover {
   color: $link-hover-color;
   text-decoration: underline;
+}
+
+a.button {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 2px;
+  background-color: $background-primary;
+  color: $button-color;
+
+  &.highlight {
+    background-color: $background-highlight;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -109,6 +124,9 @@ img {
   margin: 0 auto;
 }
 
+.clear {
+  clear: both;
+}
 
 // structure
 
@@ -129,6 +147,10 @@ body {
 // wrap header and .main, give it a white background
 .top {
   background: $top-background;
+}
+
+header, .main, footer {
+  padding: 0 $content-padding $content-padding;
 }
 
 header {
@@ -160,42 +182,48 @@ header {
 .main {
   max-width: $content-width;
   margin: 0 auto;
-  padding: 0 0 25px;
 }
 
 footer {
   max-width: $content-width;
   margin: 0 auto;
-  padding: 20px 0;
   background-color: $footer-background;
   color: $footer-color;
   font-size: $footer-font-size;
 
+  .left {
+    float: left;
+    max-width: 40%;
+  }
+
+  .right {
+    float: right;
+    max-width: 60%;
+  }
+
   .callout {
     clear: both;
 
-    .left {
-      float: left;
-      max-width: 40%;
-    }
+    .button {
+      margin: 15px 10px 0 0;
 
-    .right {
-      float: right;
-      max-width: 60%;
+      // greater than tablet
+      @media all and (min-width: 800px) {
+        margin: 55px 0 0 10px;
+      }
     }
   }
 
   .links {
     clear: both;
+    border-top: 1px solid #e1e3e4;
+    margin-top: 30px;
+    padding-top: 10px;
 
-    .left {
-      float: left;
-      max-width: 40%;
-    }
-
-    .right {
-      float: right;
-      max-width: 60%;
+    // greater than mobile
+    @media all and (min-width: 600px) {
+      margin-top: 40px;
+      padding-top: 40px;
     }
 
     h4 {
@@ -223,4 +251,47 @@ footer {
       color: $body-color;
     }
   }
+}
+
+// tablet
+
+@media all and (max-width: 800px) {
+
+footer {
+  .left, .right {
+    max-width: 100%;
+    float: none;
+  }
+
+
+  .links ul:first-child {
+    padding-left: 0;
+  }
+}
+
+
+// mobile
+
+@media all and (max-width: 600px) {
+
+header {
+  h2 {
+    display: block;
+  }
+
+  ul, li:first-child {
+    float: none;
+    padding-left: 0;
+  }
+}
+
+footer {
+  .links
+    ul {
+      float: none;
+      padding-left: 0;
+    }
+  }
+}
+
 }

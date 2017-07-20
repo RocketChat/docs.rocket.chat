@@ -17,8 +17,10 @@ defaults:
 sass:
   style: compressed
 
-gems:
+plugins_dir:
   - jekyll-feed
+  - jekyll-redirect-from
+
 exclude:
   - Gemfile
   - Gemfile.lock

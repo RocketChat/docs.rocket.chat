@@ -1,7 +1,7 @@
 - name: Rocket.Chat
   published: true
   description: |
-    The Ultimate Open Source Web Chat Platform.
+    The Rocket.Chat Server.
   project_gh: https://github.com/RocketChat/Rocket.Chat
   docs_gh: https://github.com/RocketChat/Rocket.Chat.Docs
   docs: https://rocket.chat/docs/
@@ -29,6 +29,13 @@
   published: false
   project_gh: https://github.com/RocketChat/Rocket.Chat.iOS.SDK
   dev: http://rocketchat.github.io/Rocket.Chat.iOS/
+
+- name: docs.rocket.chat
+  description: |
+    The Rocket.Chat documentation portal.
+  published: true
+  docs_gh: https://github.com/RocketChat/docs.rocket.chat
+  docs: https://rocketchat.github.io/docs.rocket.chat/
 
 - name: Rocket.chat User Presence
   published: false

@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+<h2>News</h2>
+
+{% for post in site.posts %}
+  <small>{{ post.date | date: "%b %-d, %Y" }}</small>
+  <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+{% endfor %}
