@@ -39,6 +39,8 @@ $code-font-family:
   "Consolas", "Monaco", "Ubuntu Monospace",
   "Courier New", monospace;
 
+$button-color: #ffffff;
+
 // dark grey
 $background-primary: #414852;
 // light grey
@@ -61,6 +63,18 @@ a, a:visited {
 a:hover {
   color: $link-hover-color;
   text-decoration: underline;
+}
+
+a.button {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 2px;
+  background-color: $background-primary;
+  color: $button-color;
+
+  &.highlight {
+    background-color: $background-highlight;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -110,6 +124,9 @@ img {
   margin: 0 auto;
 }
 
+.clear {
+  clear: both;
+}
 
 // structure
 
@@ -186,10 +203,28 @@ footer {
 
   .callout {
     clear: both;
+
+    .button {
+      margin: 15px 10px 0 0;
+
+      // greater than tablet
+      @media all and (min-width: 800px) {
+        margin: 55px 0 0 10px;
+      }
+    }
   }
 
   .links {
     clear: both;
+    border-top: 1px solid #e1e3e4;
+    margin-top: 30px;
+    padding-top: 10px;
+
+    // greater than mobile
+    @media all and (min-width: 600px) {
+      margin-top: 40px;
+      padding-top: 40px;
+    }
 
     h4 {
       text-transform: uppercase;
@@ -227,6 +262,7 @@ footer {
     max-width: 100%;
     float: none;
   }
+
 
   .links ul:first-child {
     padding-left: 0;
